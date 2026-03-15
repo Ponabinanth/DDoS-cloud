@@ -1,6 +1,7 @@
 // SecureChain API Service - Connects Frontend to Backend
 
-const API_BASE_URL = 'http://localhost:3000/api';
+// Use IPv4 loopback to avoid browsers/OS preferring IPv6 (::1) for "localhost".
+const API_BASE_URL = 'http://127.0.0.1:3000/api';
 
 // API Service Class
 class ApiService {
@@ -116,12 +117,16 @@ class ApiService {
     const response = await fetch(`${this.baseUrl}/upload`, {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${this.token}`
+        ...(this.token ? { 'Authorization': `Bearer ${this.token}` } : {})
       },
       body: formData
     });
 
-    return await response.json();
+    const result = await response.json().catch(() => ({}));
+    if (!response.ok) {
+      throw new Error(result.error || 'Upload failed');
+    }
+    return result;
   }
 
   // Get user's files
@@ -129,11 +134,27 @@ class ApiService {
     return await this.request('/upload/myfiles', 'GET');
   }
 
+  // Get a single file (metadata/receipt)
+  async getFile(fileId) {
+    const safeId = encodeURIComponent(fileId);
+    return await this.request(`/upload/${safeId}`, 'GET');
+  }
+
   // ============ VERIFY API ============
   
   // Verify file by hash
   async verifyHash(hash) {
     return await this.request('/verify/hash', 'POST', { hash });
+  }
+
+  // ============ TOOLS API ============
+
+  async runVulnScan(targetUrl, scanType = 'quick') {
+    return await this.request('/tools/vulnscan', 'POST', { targetUrl, scanType });
+  }
+
+  async generateReport(type, timeframe = '24h', format = 'json') {
+    return await this.request('/tools/report', 'POST', { type, timeframe, format });
   }
 
   // ============ THREAT API ============

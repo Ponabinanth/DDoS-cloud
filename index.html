@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SecureChain Cyber Defense</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 <body>
+    <div id="particles-container"></div>
     <nav id="sidebar">
         <div class="sidebar-header">
             <h1>SecureChain</h1>
+            <p class="sidebar-subtitle">Cyber Defense Command</p>
         </div>
         <ul class="section-menu">
             <li><a href="#hero"><i class="fas fa-home"></i> <span>Home</span></a></li>
@@ -20,79 +26,173 @@
             <li><a href="#upload"><i class="fas fa-cloud-upload-alt"></i> <span>Upload</span></a></li>
             <li><a href="#verify"><i class="fas fa-seal"></i> <span>Verify</span></a></li>
             <li><a href="#scan"><i class="fas fa-radar"></i> <span>Scan</span></a></li>
+            <li><a href="#request"><i class="fas fa-file-signature"></i> <span>Request</span></a></li>
+            <li><a href="#defense"><i class="fas fa-route"></i> <span>Defense</span></a></li>
+            <li><a href="#estimator"><i class="fas fa-chart-pie"></i> <span>Estimator</span></a></li>
+            <li><a href="#crypto"><i class="fas fa-lock"></i> <span>Crypto Lab</span></a></li>
+            <li><a href="#ops"><i class="fas fa-user-shield"></i> <span>Ops</span></a></li>
+            <li><a href="#voice"><i class="fas fa-microphone-alt"></i> <span>Voice</span></a></li>
             <li><a href="#chat"><i class="fas fa-comments"></i> <span>Chat</span></a></li>
             <li><a href="#map"><i class="fas fa-globe-americas"></i> <span>Threat Map</span></a></li>
             <li><a href="#intel"><i class="fas fa-brain"></i> <span>Intel</span></a></li>
             <li><a href="#vault"><i class="fas fa-vault"></i> <span>Evidence</span></a></li>
+            <li><a href="#simulation"><i class="fas fa-biohazard"></i> <span>Simulation</span></a></li>
             <li><a href="#reports"><i class="fas fa-clipboard-list"></i> <span>Reports</span></a></li>
+            <li><a href="#awareness"><i class="fas fa-lightbulb"></i> <span>Awareness</span></a></li>
+            <li><a href="#contact"><i class="fas fa-envelope-open-text"></i> <span>Contact</span></a></li>
         </ul>
         <div class="sidebar-footer">
             <a href="#" class="login-btn-link" onclick="logout()" title="Logout"><i class="fas fa-sign-out-alt"></i></a>
             <div class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme"><i class="fas fa-moon" id="themeIcon"></i></div>
+        </div>
     </nav>
 
     <main id="main-content">
         <section id="hero">
-            <h2>Cyber Defense Command Platform</h2>
-            <p>Advanced blockchain powered cybersecurity platform with real-time monitoring, AI threat detection and tamper-proof verification.</p>
+            <div class="hero-grid">
+                <div class="hero-copy">
+    <h2><span class="typing-text">Cyber Defense Command Platform</span></h2>
+                    <p>Advanced blockchain powered cybersecurity platform with real-time monitoring, AI threat detection and tamper-proof verification.</p>
+                    <div class="hero-actions">
+                        <button class="ripple-btn" onclick="runQuickScan()">Run Quick Scan</button>
+                        <button class="ripple-btn btn-ghost" onclick="document.querySelector('#ops').scrollIntoView({ behavior: 'smooth' })">Open Incident Ops</button>
+                    </div>
+                    <div class="hero-badges">
+                        <span class="badge" id="apiStatus">API: Checking...</span>
+                        <span class="badge" id="modeBadge">Mode: Simulation</span>
+                        <span class="badge" id="dataBadge">Data: Local</span>
+                    </div>
+                </div>
+                <div class="hero-media">
+                    <img src="https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif" alt="Cyber Defense">
+                </div>
+            </div>
             <div class="hero-stats">
                 <div class="stat-item"><i class="fas fa-shield-alt"></i><span class="stat-number" data-count="1250">0</span><span class="stat-label">Threats Blocked</span></div>
                 <div class="stat-item"><i class="fas fa-server"></i><span class="stat-number" data-count="48">0</span><span class="stat-label">Active Nodes</span></div>
                 <div class="stat-item"><i class="fas fa-file-protect"></i><span class="stat-number" data-count="8920">0</span><span class="stat-label">Files Secured</span></div>
-            <img src="https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif" alt="Cyber Defense">
+            </div>
         </section>
 
         <section id="dashboard">
             <h2><i class="fas fa-tachometer-alt"></i> Security Dashboard</h2>
-            <div class="grid">
+            <div class="grid dashboard-grid">
                 <div class="card dashboard-card">
-                    <div class="card-header"><i class="fas fa-shield-virus"></i><h3>Threat Protection</h3></div>
-                    <div class="protection-meter"><div class="meter-fill" style="width: 87%"></div>
+<div class="card-header"><i class="fas fa-shield-virus card-icon"></i><h3>Threat Protection</h3></div>
+</xai:function_call
+
+<xai:function_call name="edit_file">
+<parameter name="path">index.html
+                    <div class="protection-meter">
+                        <div class="meter-fill" style="width: 87%"></div>
+                    </div>
                     <p class="protection-status">87% Protected</p>
-                    <button onclick="runQuickScan()">Quick Scan</button>
+                    <button class="ripple-btn" onclick="runQuickScan()">Quick Scan</button>
                 </div>
                 <div class="card dashboard-card">
-                    <div class="card-header"><i class="fas fa-bug"></i><h3>Malware Detection</h3></div>
+<div class="card-header"><i class="fas fa-bug card-icon"></i><h3>Malware Detection</h3></div>
+</xai:function_call
+
+<xai:function_call name="edit_file">
+<parameter name="path">index.html
                     <div class="threat-counter"><span class="counter-number">0</span><span class="counter-label">Threats Detected</span></div>
                     <button onclick="updateThreatStatus()">Update Status</button>
                 </div>
                 <div class="card dashboard-card">
-                    <div class="card-header"><i class="fas fa-lock"></i><h3>Encryption Status</h3></div>
+<div class="card-header"><i class="fas fa-lock card-icon"></i><h3>Encryption Status</h3></div>
+</xai:function_call
+
+<xai:function_call name="edit_file">
+<parameter name="path">index.html
                     <div class="encryption-status"><i class="fas fa-check-circle"></i><span>AES-256 Active</span></div>
                     <p>All data encrypted</p>
                 </div>
                 <div class="card dashboard-card">
-                    <div class="card-header"><i class="fas fa-clock"></i><h3>Uptime</h3></div>
+<div class="card-header"><i class="fas fa-clock card-icon"></i><h3>Uptime</h3></div>
+</xai:function_call
+
+<xai:function_call name="edit_file">
+<parameter name="path">index.html
                     <div class="uptime-display"><span class="uptime-number">99.99</span><span class="uptime-unit">%</span></div>
                     <p>Last 30 days</p>
                 </div>
+                <div class="card dashboard-card threat-feed-card">
+                    <div class="card-header"><i class="fas fa-broadcast-tower"></i><h3>Live Threat Feed</h3></div>
+                    <div id="threatFeed" class="threat-feed"></div>
+                </div>
+            </div>
+            
+            <!-- My Files Storage -->
+            <div class="card dashboard-card files-card">
+                <div class="card-header"><i class="fas fa-folder-open"></i><h3>My Files</h3><button onclick="loadMyFiles()" class="btn-ghost">Refresh</button></div>
+                <div id="myFilesTable" class="files-table">
+                    <p>No files uploaded yet. <a href="#upload">Upload now</a></p>
+                </div>
+            </div>
+            
+        </div>
+            </div>
         </section>
 
         <section id="tools">
             <h2><i class="fas fa-tools"></i> Security Tools</h2>
             <div class="tools-grid">
-                <div class="tool-card">
-                    <i class="fas fa-key"></i><h3>Password Checker</h3><p>Check password strength</p>
+
+<div class="tool-card">
+                    <i class="fas fa-key tool-icon"></i>
+                    <h3>Password Checker</h3>
+                    <p>Check password strength</p>
                     <input type="password" id="passwordInput" placeholder="Enter password">
                     <button onclick="checkPassword()">Check</button>
                     <div id="passwordResult" class="tool-result"></div>
-                <div class="tool-card">
-                    <i class="fas fa-calculator"></i><h3>Risk Calculator</h3><p>Calculate risk score</p>
+                </div>
+</xai:function_call
+
+<xai:function_call name="edit_file">
+<parameter name="path">index.html
+<div class="tool-card">
+                    <i class="fas fa-calculator tool-icon"></i>
+                    <h3>Risk Calculator</h3>
+                    <p>Estimate operational risk</p>
+                    <div class="risk-sliders">
+                        <div class="risk-slider">
+                            <label>Exposure <span id="riskFactor1Value">60</span></label>
+                            <input type="range" id="riskFactor1" min="0" max="100" value="60">
+                        </div>
+                        <div class="risk-slider">
+                            <label>Complexity <span id="riskFactor2Value">50</span></label>
+                            <input type="range" id="riskFactor2" min="0" max="100" value="50">
+                        </div>
+                        <div class="risk-slider">
+                            <label>Detection <span id="riskFactor3Value">40</span></label>
+                            <input type="range" id="riskFactor3" min="0" max="100" value="40">
+                        </div>
+                    </div>
                     <button onclick="calculateRisk()">Calculate</button>
                     <div id="riskResult" class="tool-result"></div>
+                </div>
+</xai:function_call
+
+<xai:function_call name="edit_file">
+<parameter name="path">index.html
                 <div class="tool-card">
-                    <i class="fas fa-hdd"></i><h3>Storage</h3><p>65% used</p>
+                    <i class="fas fa-hdd"></i>
+                    <h3>Storage</h3>
+                    <p>65% used</p>
                     <button onclick="optimizeStorage()">Optimize</button>
                 </div>
                 <div class="tool-card">
-                    <i class="fas fa-random"></i><h3>Hash Generator</h3><p>Generate SHA-256</p>
+                    <i class="fas fa-random"></i>
+                    <h3>Hash Generator</h3>
+                    <p>Generate SHA-256</p>
                     <input type="text" id="hashGenInput" placeholder="Enter text">
                     <button onclick="generateHash()">Generate</button>
                     <div id="hashGenResult" class="tool-result"></div>
+                </div>
             </div>
         </section>
 
-<section id="upload">
+        <section id="upload">
             <h2><i class="fas fa-cloud-upload-alt"></i> Secure Upload</h2>
             <div class="upload-container">
                 <div class="card">
@@ -106,7 +206,8 @@
                         <p id="fileName" class="file-name"></p>
                     </div>
                     <button onclick="uploadFile()" class="upload-btn">Upload to Blockchain</button>
-                    <div id="uploadStatus"></div>
+                    <div id="uploadStatus" class="status"></div>
+                </div>
                 <div class="card">
                     <h3>Recent Uploads</h3>
                     <ul class="file-list" id="fileList">
@@ -114,6 +215,7 @@
                         <li><i class="fas fa-file-code"></i> source_code.js <span class="verified"><i class="fas fa-check"></i></span></li>
                     </ul>
                 </div>
+            </div>
         </section>
 
         <section id="verify">
@@ -123,10 +225,12 @@
                     <h3>Verify File Hash</h3>
                     <input type="text" id="hashInput" placeholder="Enter hash">
                     <button onclick="verifyHash()">Verify</button>
-                    <div id="verifyStatus"></div>
+                    <div id="verifyStatus" class="status"></div>
+                </div>
                 <div class="card">
                     <h3>QR Verification</h3>
                     <div class="qr-placeholder"><i class="fas fa-qrcode"></i></div>
+                </div>
             </div>
         </section>
 
@@ -135,8 +239,12 @@
             <div class="scanner-container">
                 <div class="card">
                     <h3>Quick Scan</h3>
-                    <div class="scan-target"><input type="text" placeholder="Enter IP" value="192.168.1.1"><button onclick="startScan()">Start</button></div>
+                    <div class="scan-target">
+                        <input type="text" id="scanTarget" placeholder="Enter IP or CIDR" value="192.168.1.1">
+                        <button onclick="startScan()">Start</button>
+                    </div>
                     <div id="scanResults"></div>
+                </div>
                 <div class="card">
                     <h3>History</h3>
                     <ul class="scan-history">
@@ -144,6 +252,256 @@
                         <li><span>Yesterday</span> <span class="scan-status warning">2 Issues</span></li>
                     </ul>
                 </div>
+            </div>
+        </section>
+
+        <section id="request">
+            <h2><i class="fas fa-file-signature"></i> Security Operation Request</h2>
+            <div class="request-grid">
+                <div class="card tilt-card">
+                    <h3>Secure System Interaction</h3>
+                    <div class="form-group">
+                        <label for="targetSystem">Target System / Network</label>
+                        <input type="text" id="targetSystem" placeholder="e.g., Banking core switch, Gov DC, IoT mesh">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="operationDuration">Security Operation Duration <span id="durationLabel">7 days</span></label>
+                            <input type="range" id="operationDuration" min="1" max="30" value="7">
+                        </div>
+                        <div class="form-group">
+                            <label for="nodeCountInput">Monitored Nodes/Devices <span id="nodesLabel">8</span></label>
+                            <input type="range" id="nodeCountInput" min="1" max="20" value="8">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="securityLevel">Security Level</label>
+                        <select id="securityLevel">
+                            <option>Basic</option>
+                            <option>Advanced</option>
+                            <option>Military Grade</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Threat Categories</label>
+                        <div class="threat-chip-group" id="threatChipGroup">
+                            <label class="chip"><input type="checkbox" value="Malware">Malware</label>
+                            <label class="chip"><input type="checkbox" value="DDoS">DDoS</label>
+                            <label class="chip"><input type="checkbox" value="Phishing">Phishing</label>
+                            <label class="chip"><input type="checkbox" value="Insider Threat">Insider Threat</label>
+                            <label class="chip"><input type="checkbox" value="Zero-Day Exploits">Zero-Day Exploits</label>
+                            <label class="chip"><input type="checkbox" value="Data Breach">Data Breach</label>
+                        </div>
+                    </div>
+                    <button class="ripple-btn" onclick="submitOperationRequest()">Submit Request</button>
+                    <div id="operationStatus" class="status muted"></div>
+                </div>
+                <div class="card tilt-card">
+                    <h3>Validation & Timeline</h3>
+                    <p id="operationSummary">Awaiting input to validate parameters.</p>
+                    <div class="progress-anim">
+                        <div class="progress-fill" id="operationProgress"></div>
+                    </div>
+                    <div class="mini-timeline" id="operationTimeline"></div>
+                    <div class="badge accent" id="operationLevelBadge">Level: Basic</div>
+                    <div class="selected-threats" id="operationThreatChips"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="defense">
+            <h2><i class="fas fa-route"></i> AI Cyber Defense Plan</h2>
+            <div class="scenario-chips" id="scenarioChips">
+                <button class="chip" data-scenario="government" onclick="selectScenario('government')">Government Data Center</button>
+                <button class="chip" data-scenario="military" onclick="selectScenario('military')">Military Communication Network</button>
+                <button class="chip" data-scenario="banking" onclick="selectScenario('banking')">Banking Infrastructure</button>
+                <button class="chip" data-scenario="smartcity" onclick="selectScenario('smartcity')">Smart City IoT Network</button>
+                <button class="chip" data-scenario="cloud" onclick="selectScenario('cloud')">Cloud Infrastructure</button>
+                <button class="chip" data-scenario="cni" onclick="selectScenario('cni')">Critical National Infrastructure</button>
+            </div>
+            <div class="defense-grid">
+                <div class="card tilt-card">
+                    <h3>AI Generated Strategy</h3>
+                    <p id="strategyText">Choose an environment above to generate a day-by-day security monitoring and response plan.</p>
+                    <div class="strategy-tags" id="strategyTags"></div>
+                    <div class="defense-actions">
+                        <div class="action-pill">Automated detection</div>
+                        <div class="action-pill">AI response</div>
+                        <div class="action-pill">Incident scheduling</div>
+                        <div class="action-pill">Threat timeline</div>
+                    </div>
+                    <button class="ripple-btn" onclick="generateDefensePlan()">Generate Plan</button>
+                </div>
+                <div class="card tilt-card">
+                    <h3>Threat Monitoring Timeline</h3>
+                    <ul class="timeline" id="planTimeline"></ul>
+                </div>
+                <div class="card tilt-card">
+                    <h3>Incident Response Schedule</h3>
+                    <div class="schedule-grid" id="planSchedule"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="estimator">
+            <h2><i class="fas fa-chart-pie"></i> Cyber Risk Estimator</h2>
+            <div class="estimator-grid">
+                <div class="card tilt-card">
+                    <h3>Risk & Cost Inputs</h3>
+                    <div class="form-group">
+                        <label>Infrastructure Risk Level <span id="infraLabel">55</span></label>
+                        <input type="range" id="infraScore" min="0" max="100" value="55">
+                    </div>
+                    <div class="form-group">
+                        <label>Threat Probability <span id="probLabel">45%</span></label>
+                        <input type="range" id="probScore" min="0" max="100" value="45">
+                    </div>
+                    <div class="form-group">
+                        <label>Defense Maturity <span id="maturityLabel">60</span></label>
+                        <input type="range" id="maturityScore" min="0" max="100" value="60">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Nodes / Devices</label>
+                            <input type="number" id="estimatorNodes" min="1" max="500" value="40">
+                        </div>
+                        <div class="form-group">
+                            <label>Cost per Node ($)</label>
+                            <input type="number" id="costPerNode" min="5" max="500" value="120">
+                        </div>
+                    </div>
+                    <button class="ripple-btn" onclick="calculateEstimator()">Calculate Risk & Cost</button>
+                </div>
+                <div class="card tilt-card estimator-out">
+                    <h3>Breakdown</h3>
+                    <div class="risk-badge" id="riskBadge">Moderate Risk</div>
+                    <p class="risk-score" id="riskScoreValue">0%</p>
+                    <div class="cost-breakdown" id="costBreakdown"></div>
+                    <div class="allocation" id="resourceAllocation"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="crypto">
+            <h2><i class="fas fa-lock"></i> Encryption Strength Analyzer</h2>
+            <div class="crypto-grid">
+                <div class="card tilt-card">
+                    <h3>Hash Strength</h3>
+                    <input type="text" id="hashStrengthInput" placeholder="Paste hash to analyze (SHA-256, SHA-512, etc.)">
+                    <button onclick="analyzeHashStrength()">Analyze Hash</button>
+                    <div id="hashStrengthResult" class="status muted"></div>
+                </div>
+                <div class="card tilt-card">
+                    <h3>Algorithm Comparison</h3>
+                    <select id="algorithmSelect">
+                        <option value="AES">AES</option>
+                        <option value="RSA">RSA</option>
+                        <option value="SHA-256">SHA-256</option>
+                        <option value="SHA-512">SHA-512</option>
+                        <option value="ECC">ECC</option>
+                        <option value="Blockchain Hashing">Blockchain hashing</option>
+                    </select>
+                    <div id="algorithmDetails" class="algorithm-details"></div>
+                </div>
+                <div class="card tilt-card crypto-card-grid">
+                    <div class="crypto-card" data-algo="AES"><h4>AES</h4><div class="strength-meter"><span style="width:85%"></span></div><p>Symmetric | 256-bit | Fast at rest</p></div>
+                    <div class="crypto-card" data-algo="RSA"><h4>RSA</h4><div class="strength-meter"><span style="width:72%"></span></div><p>Asymmetric | 4096-bit | Key exchange</p></div>
+                    <div class="crypto-card" data-algo="SHA-256"><h4>SHA-256</h4><div class="strength-meter"><span style="width:78%"></span></div><p>Hash | 256-bit | Integrity</p></div>
+                    <div class="crypto-card" data-algo="SHA-512"><h4>SHA-512</h4><div class="strength-meter"><span style="width:92%"></span></div><p>Hash | 512-bit | Long-term</p></div>
+                    <div class="crypto-card" data-algo="ECC"><h4>ECC</h4><div class="strength-meter"><span style="width:88%"></span></div><p>Curve25519 / P-384 | Modern handshake</p></div>
+                    <div class="crypto-card" data-algo="Blockchain Hashing"><h4>Blockchain</h4><div class="strength-meter"><span style="width:80%"></span></div><p>Merkle proofs | Tamper detection</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ops">
+            <h2><i class="fas fa-user-shield"></i> Incident Ops</h2>
+            <div class="ops-grid">
+                <div class="card ops-card">
+                    <div class="card-header"><i class="fas fa-stopwatch"></i><h3>Response Timer</h3></div>
+                    <div class="timer-display" id="responseTimer">00:00:00</div>
+                    <div class="timer-controls">
+                        <button onclick="startTimer()">Start</button>
+                        <button class="btn-ghost" onclick="pauseTimer()">Pause</button>
+                        <button class="btn-ghost" onclick="resetTimer()">Reset</button>
+                    </div>
+                    <div class="log-input">
+                        <input type="text" id="incidentNote" placeholder="Log an action (e.g., Isolated host)">
+                        <button onclick="addIncidentLog()">Add</button>
+                    </div>
+                    <ul class="incident-log" id="incidentLog"></ul>
+                    <button class="btn-ghost btn-danger" onclick="clearIncidentLog()">Clear Log</button>
+                </div>
+                <div class="card ops-card">
+                    <div class="card-header"><i class="fas fa-clipboard-check"></i><h3>Response Checklist</h3></div>
+                    <div class="checklist-progress">
+                        <div class="progress-bar"><div class="progress-fill" id="checklistProgress"></div></div>
+                        <span id="checklistPercent">0% complete</span>
+                    </div>
+                    <ul class="ops-checklist">
+                        <li><label><input type="checkbox" data-key="identify"> Identify scope and blast radius</label></li>
+                        <li><label><input type="checkbox" data-key="contain"> Contain affected systems</label></li>
+                        <li><label><input type="checkbox" data-key="eradicate"> Eradicate root cause</label></li>
+                        <li><label><input type="checkbox" data-key="recover"> Recover services</label></li>
+                        <li><label><input type="checkbox" data-key="report"> Report and archive evidence</label></li>
+                    </ul>
+                </div>
+                <div class="card ops-card">
+                    <div class="card-header"><i class="fas fa-microscope"></i><h3>IOC Triage</h3></div>
+                    <textarea id="iocInput" rows="6" placeholder="Paste IPs, domains, URLs, or hashes"></textarea>
+                    <button onclick="analyzeIocs()">Analyze</button>
+                    <div id="iocResults" class="tool-result"></div>
+                    <div class="ioc-tags" id="iocTags"></div>
+                </div>
+                <div class="card ops-card">
+                    <div class="card-header"><i class="fas fa-vault"></i><h3>Evidence Chain</h3></div>
+                    <input type="text" id="evidenceId" placeholder="Evidence ID">
+                    <input type="text" id="evidenceOwner" placeholder="Custodian">
+                    <textarea id="evidenceNote" rows="3" placeholder="Handling notes"></textarea>
+                    <div class="evidence-actions">
+                        <button onclick="addEvidence()">Add Entry</button>
+                        <button class="btn-ghost" onclick="exportEvidence()">Export JSON</button>
+                        <button class="btn-ghost btn-danger" onclick="clearEvidence()">Clear</button>
+                    </div>
+                    <div id="evidenceStatus" class="status"></div>
+                    <ul class="evidence-list" id="evidenceList"></ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="voice">
+            <h2><i class="fas fa-microphone-alt"></i> AI Cyber Command Voice Assistant</h2>
+            <div class="voice-grid">
+                <div class="card tilt-card voice-panel">
+                    <div class="listening-indicator" id="listeningIndicator">
+                        <span class="pulse"></span><span class="pulse second"></span>
+                    </div>
+                    <p id="voiceStatus">Idle – click start to issue a command.</p>
+                    <textarea id="voiceTranscript" rows="3" readonly placeholder="Voice transcript appears here"></textarea>
+                    <div class="voice-actions">
+                        <button class="ripple-btn" onclick="startVoice()">Start Listening</button>
+                        <button class="btn-ghost" onclick="stopVoice()">Stop</button>
+                    </div>
+                    <div id="voiceResponse" class="status muted"></div>
+                </div>
+                <div class="card tilt-card">
+                    <h3>Supported Commands</h3>
+                    <ul class="command-list">
+                        <li>“Scan network for threats”</li>
+                        <li>“Upload secure file”</li>
+                        <li>“Verify blockchain hash”</li>
+                        <li>“Show threat map”</li>
+                        <li>“Generate audit report”</li>
+                        <li>“Start DDoS simulation”</li>
+                        <li>“Check system health”</li>
+                        <li>“Display attack analytics”</li>
+                    </ul>
+                </div>
+                <div class="card tilt-card voice-feedback">
+                    <h3>Execution Log</h3>
+                    <div class="voice-log" id="voiceLog"></div>
+                </div>
+            </div>
         </section>
 
         <section id="chat">
@@ -152,12 +510,18 @@
                 <div class="chat-window">
                     <div class="chat-header"><i class="fas fa-robot"></i><span>AI Assistant</span></div>
                     <div class="chat-messages" id="chatMessages">
-                        <div class="message bot"><div class="message-content"><i class="fas fa-robot"></i><p>Hello! How can I help you?</p></div>
+                        <div class="message bot"><div class="message-content"><i class="fas fa-robot"></i><p>Hello! How can I help you?</p></div></div>
                     </div>
                     <div class="chat-input">
                         <input type="text" id="chatInput" placeholder="Type message...">
                         <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
                     </div>
+                </div>
+                <div class="chat-quick">
+                    <button class="btn-ghost" onclick="askQuick('Show recent alerts')">Recent alerts</button>
+                    <button class="btn-ghost" onclick="askQuick('Summarize system status')">System status</button>
+                    <button class="btn-ghost" onclick="askQuick('Draft an incident update')">Incident update</button>
+                </div>
             </div>
         </section>
 
@@ -167,17 +531,21 @@
                 <div class="threat-search-container">
                     <div class="search-controls">
                         <select id="searchType" class="search-select">
-                            <option value="country">Country</option><option value="state">State</option><option value="district">District</option>
+                            <option value="country">Country</option>
+                            <option value="state">State</option>
+                            <option value="district">District</option>
                         </select>
-                        <input type="text" id="threatSearchInput" placeholder="Search (e.g., India, Chennai)...">
+                        <input type="text" id="threatSearchInput" class="threat-search-input" placeholder="Search (e.g., India, Chennai)...">
                         <button onclick="searchThreats()">Search</button>
                         <button onclick="clearSearch()" class="clear-btn">Clear</button>
                     </div>
                     <div id="searchResults" class="search-results"></div>
                     <div id="selectedCountry" class="selected-country"></div>
+                </div>
                 <div class="threat-map-wrapper">
                     <img src="https://media.giphy.com/media/l3vR85PnGsBwu1PFK/giphy.gif" alt="Real-time Threat Map" class="threat-map-gif">
                 </div>
+            </div>
         </section>
 
         <section id="intel">
@@ -186,6 +554,7 @@
                 <div class="card intel-card"><h3><i class="fas fa-database"></i> Malware DB</h3><p class="intel-stat">45,892 signatures</p></div>
                 <div class="card intel-card"><h3><i class="fas fa-brain"></i> AI Detection</h3><p class="intel-stat">99.7% accuracy</p></div>
                 <div class="card intel-card"><h3><i class="fas fa-exclamation-triangle"></i> Alerts</h3><p class="intel-stat alert">12 Critical</p></div>
+            </div>
         </section>
 
         <section id="vault">
@@ -196,8 +565,54 @@
                     <div class="vault-stats">
                         <div class="vault-stat"><span class="vault-number">1,247</span><span class="vault-label">Evidence</span></div>
                         <div class="vault-stat"><span class="vault-number">48</span><span class="vault-label">Nodes</span></div>
+                    </div>
                     <button onclick="accessVault()">Access Vault</button>
                 </div>
+            </div>
+        </section>
+
+        <section id="simulation">
+            <h2><i class="fas fa-biohazard"></i> Cyber Attack Simulation Center</h2>
+            <div class="simulation-grid">
+                <div class="card tilt-card">
+                    <h3>Scenario Controls</h3>
+                    <div class="form-group">
+                        <label for="simulationType">Select Simulation</label>
+                        <select id="simulationType">
+                            <option value="ddos">DDoS Flood</option>
+                            <option value="malware">Malware Outbreak</option>
+                            <option value="phishing">Phishing Campaign</option>
+                            <option value="insider">Insider Threat</option>
+                            <option value="zeroday">Zero-Day Exploit</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="simulationDuration">Duration (seconds)</label>
+                        <input type="range" id="simulationDuration" min="5" max="60" value="15">
+                    </div>
+                    <button class="ripple-btn" onclick="startSimulation()">Start Simulation</button>
+                    <div class="progress-anim">
+                        <div class="progress-fill" id="simulationProgress"></div>
+                    </div>
+                    <div id="simulationStatus" class="status muted"></div>
+                </div>
+                <div class="card tilt-card">
+                    <h3>Cyber Attack Visualization</h3>
+                    <div class="attack-visualization" id="attackVisualization">
+                        <div class="radar-sweep"></div>
+                        <div class="attack-streams"></div>
+                        <div class="drone" id="drone"></div>
+                    </div>
+                    <p class="small">Live particle network (50+ nodes) animates when simulation runs.</p>
+                </div>
+                <div class="card tilt-card">
+                    <h3>Security Audit Log Generator</h3>
+                    <p>Generate a printable/shareable incident log.</p>
+                    <button class="ripple-btn" onclick="generateAuditLog()">Generate Audit Log</button>
+                    <button class="btn-ghost" onclick="window.print()">Print</button>
+                    <div id="auditLogOutput" class="status muted"></div>
+                </div>
+            </div>
         </section>
 
         <section id="reports">
@@ -207,20 +622,138 @@
                 <div class="card report-card" onclick="generateReport('threat')"><i class="fas fa-shield-alt"></i><h3>Threat Analysis</h3></div>
                 <div class="card report-card" onclick="generateReport('performance')"><i class="fas fa-chart-line"></i><h3>Performance</h3></div>
                 <div class="card report-card" onclick="generateReport('compliance')"><i class="fas fa-gavel"></i><h3>Compliance</h3></div>
+            </div>
+        </section>
+
+        <section id="awareness">
+            <h2><i class="fas fa-lightbulb"></i> Security Awareness Tips</h2>
+            <div class="awareness-grid">
+                <div class="card tilt-card">
+                    <h3>Zero Trust</h3>
+                    <p>Assume breach, verify explicitly, least privilege everywhere.</p>
+                </div>
+                <div class="card tilt-card">
+                    <h3>Patch Cadence</h3>
+                    <p>Apply critical patches within 24 hours; automate where possible.</p>
+                </div>
+                <div class="card tilt-card">
+                    <h3>Phishing Drills</h3>
+                    <p>Monthly simulations reduce click-through by up to 60%.</p>
+                </div>
+                <div class="card tilt-card">
+                    <h3>Backups</h3>
+                    <p>3-2-1 rule with immutable storage for ransomware resilience.</p>
+                </div>
+                <div class="card tilt-card">
+                    <h3>Monitoring</h3>
+                    <p>Centralize logs, enable UEBA, and alert on anomalies.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2><i class="fas fa-envelope-open-text"></i> Contact & Incident Reporting</h2>
+            <div class="contact-grid">
+                <div class="card tilt-card">
+                    <h3>Report an Incident</h3>
+                    <div class="form-group">
+                        <label for="contactName">Name</label>
+                        <input type="text" id="contactName" placeholder="Analyst name">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">Email</label>
+                        <input type="email" id="contactEmail" placeholder="you@securechain.io">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="incidentSeverity">Severity</label>
+                            <select id="incidentSeverity">
+                                <option>Low</option>
+                                <option>Moderate</option>
+                                <option>High</option>
+                                <option>Critical</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="incidentType">Type</label>
+                            <select id="incidentType">
+                                <option>Malware</option>
+                                <option>DDoS</option>
+                                <option>Phishing</option>
+                                <option>Insider Threat</option>
+                                <option>Data Breach</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="incidentDetails">Details</label>
+                        <textarea id="incidentDetails" rows="3" placeholder="Describe what happened, affected assets, timeline..."></textarea>
+                    </div>
+                    <button class="ripple-btn" onclick="submitIncident()">Submit Incident</button>
+                    <div id="contactStatus" class="status muted"></div>
+                </div>
+                <div class="card tilt-card">
+                    <h3>Security Alerts Newsletter</h3>
+                    <p>Get weekly threat intel, CVE radar, and mitigation playbooks.</p>
+                    <div class="form-group">
+                        <label for="newsletterEmail">Email</label>
+                        <input type="email" id="newsletterEmail" placeholder="alerts@domain.com">
+                    </div>
+                    <button class="ripple-btn" onclick="subscribeNewsletter()">Subscribe</button>
+                    <div id="newsletterStatus" class="status muted"></div>
+                    <p class="small">Online/offline status: <span class="badge" id="onlineStatus">Checking...</span></p>
+                </div>
+            </div>
         </section>
 
         <footer><p>SecureChain Cyber Defense Platform</p></footer>
     </main>
 
+    <div id="cmdk" class="cmdk" aria-hidden="true">
+        <div class="cmdk-backdrop" data-cmdk-close></div>
+        <div class="cmdk-panel" role="dialog" aria-modal="true" aria-label="Cyber Command Search">
+            <div class="cmdk-header">
+                <div class="cmdk-title"><i class="fas fa-terminal"></i> Cyber Command</div>
+                <div class="cmdk-hints">
+                    <span class="cmdk-kbd">Ctrl</span><span class="cmdk-kbd">K</span>
+                    <span class="cmdk-kbd">Esc</span>
+                </div>
+            </div>
+            <input id="cmdkInput" class="cmdk-input" type="text" placeholder="Type a command or jump to a section...">
+            <div id="cmdkResults" class="cmdk-results"></div>
+            <div class="cmdk-footer">Tip: Type “theme”, “scan”, “ops”, “voice”, “simulate”.</div>
+        </div>
+    </div>
+
     <script src="js/api.js"></script>
+    <script src="js/cursor-pen.js" defer></script>
     <script src="script.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', async function() {
             const currentUser = localStorage.getItem('securechain_current_user');
-            if (!currentUser) { window.location.href = 'login.html'; }
+            if (currentUser) return;
+
+            const token = localStorage.getItem('auth_token');
+            if (token && window.api) {
+                try {
+                    window.api.setToken(token);
+                    const profile = await window.api.getProfile();
+                    const user = profile?.user || profile;
+                    if (user?.email) {
+                        localStorage.setItem('securechain_current_user', JSON.stringify(user));
+                        return;
+                    }
+                } catch (_error) {
+                    window.api.clearToken?.();
+                }
+            }
+
+            window.location.href = 'login.html';
         });
-        function logout() {
+        async function logout() {
+            try { await window.api?.logout?.(); } catch (_e) {}
             localStorage.removeItem('securechain_current_user');
+            localStorage.removeItem('auth_token');
             window.location.href = 'login.html';
         }
         window.logout = logout;

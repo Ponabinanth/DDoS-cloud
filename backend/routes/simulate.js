@@ -7,7 +7,7 @@ const Audit = require('../models/Audit');
 // Simulate DDoS attack
 router.post('/ddos', auth, adminAuth, async (req, res) => {
   try {
-    const { targetIP, intensity = 'MEDIUM' } = req.body;
+    const { targetIP, intensity = 'MEDIUM' } = req.body || {};
     
     const threat = new Threat({
       attackType: 'DDoS',

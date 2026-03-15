@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const crypto = require('crypto');
+const mongoose = require('mongoose');
 const { auth } = require('../middleware/auth');
 const File = require('../models/File');
 const Audit = require('../models/Audit');
@@ -26,9 +27,10 @@ router.post('/', auth, upload.single('file'), async (req, res) => {
     // Simulate blockchain transaction hash
     const blockchainTxHash = '0x' + crypto.randomBytes(32).toString('hex');
     
+    const storedName = req.file.originalname || `upload-${Date.now()}`;
     const file = new File({
-      filename: req.file.filename,
-      originalName: req.file.originalname,
+      filename: storedName,
+      originalName: storedName,
       hash: fileHash,
       blockchainTxHash,
       size: req.file.size,
@@ -68,6 +70,25 @@ router.get('/myfiles', auth, async (req, res) => {
     res.json(files);
   } catch (error) {
     res.status(500).json({ error: 'Failed to fetch files' });
+  }
+});
+
+// Get file metadata (receipt)
+router.get('/:id', auth, async (req, res) => {
+  try {
+    const { id } = req.params;
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      return res.status(400).json({ error: 'Invalid file id' });
+    }
+
+    const file = await File.findOne({ _id: id, uploadedBy: req.user._id });
+    if (!file) {
+      return res.status(404).json({ error: 'File not found' });
+    }
+
+    res.json(file);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to fetch file' });
   }
 });
 

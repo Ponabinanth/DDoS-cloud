@@ -1,0 +1,52 @@
+{
+  "name": "SecureChain Cyber Defense",
+  "short_name": "SecureChain",
+  "description": "Advanced blockchain-powered cybersecurity dashboard with real-time threat monitoring, file verification, and incident response tools",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#00ff88",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDE5MiAxOTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxjaXJjbGUgY3g9Ijk2IiBjeT0iOTYiIHI9Ijk2IiBmaWxsPSIjMDBGRjg4Ii8+CjxwYXRoIGQ9Ik0xMjEgMTM0QzEyMSAxMzQgMTIxIDEzNCAxMjEgMTM0VjEzNFYxMzRIMTIxWiIgZmlsbD0iIzBBMEEwQSIvPgo8L3N2Zz4K",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://via.placeholder.com/192x192/00ff88/0a0a0a?text=SC",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["security", "utilities", "productivity"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Dashboard",
+      "short_name": "Dash",
+      "description": "Open Security Dashboard",
+      "url": "/index.html#dashboard",
+      "icons": [{"src": "https://via.placeholder.com/96x96/00ff88/0a0a0a?text=D", "sizes": "96x96"}]
+    },
+    {
+      "name": "Threat Map",
+      "short_name": "Map",
+      "description": "Global Threat Map",
+      "url": "/index.html#map",
+      "icons": [{"src": "https://via.placeholder.com/96x96/00ff88/0a0a0a?text=M", "sizes": "96x96"}]
+    },
+    {
+      "name": "Upload Files",
+      "short_name": "Upload",
+      "description": "Secure File Upload",
+      "url": "/index.html#upload",
+      "icons": [{"src": "https://via.placeholder.com/96x96/00ff88/0a0a0a?text=U", "sizes": "96x96"}]
+    }
+  ]
+}
+

@@ -4,7 +4,18 @@ const auditSchema = new mongoose.Schema({
   eventType: {
     type: String,
     required: true,
-    enum: ['LOGIN', 'LOGOUT', 'UPLOAD', 'VERIFY', 'DELETE', 'ADMIN_ACTION']
+    enum: [
+      'LOGIN',
+      'LOGOUT',
+      'UPLOAD',
+      'VERIFY',
+      'DELETE',
+      'ADMIN_ACTION',
+      'VULN_SCAN',
+      'REPORT_GENERATED',
+      'HEALTH',
+      'DOWNLOAD'
+    ]
   },
   description: {
     type: String,
